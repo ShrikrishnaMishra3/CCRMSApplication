@@ -13,6 +13,7 @@ public List<Patient> getAllPatientInfo();
 	public Patient getPatientById(Long id);
 	public List<Patient> getAllPatientes();
 	public Long updatePatient(Patient patient);
+	public Search<Patient> getPatientById(Long id);
 	
 		
 }
