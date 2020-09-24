@@ -48,6 +48,12 @@ public class PatientServiceImpl implements PatientService{
 		patientDao.updatePatient(patient);
 		  return  patient.getId();
 	}
+	@Override
+	public Search<Patient> getPatientById(Long id) {
+		return patientDao.getPatientById(id);
+	
+		
+	}
 	
 
 	
