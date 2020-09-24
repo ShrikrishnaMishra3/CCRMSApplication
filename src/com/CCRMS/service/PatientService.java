@@ -15,6 +15,7 @@ public interface PatientService {
 	public Patient getPatientById(Long id);
 	
 	public Long updatePatient(Patient patient);
+	public Search<Patient> getPatientById(Long id);
 	
 	
 
