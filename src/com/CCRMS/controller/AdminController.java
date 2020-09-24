@@ -33,12 +33,12 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/addPatient")
-	public ModelAndView addNote(HttpServletResponse response) throws IOException {
+	public ModelAndView addPatient(HttpServletResponse response) throws IOException {
 		return new ModelAndView("addPatient");
 	}
 
 	@RequestMapping(value = "/deletePatient")
-	public ModelAndView deleteNote(HttpServletRequest request) throws IOException {
+	public ModelAndView deletePatient(HttpServletRequest request) throws IOException {
 		Long patientid = Long.parseLong(request.getParameter("id"));
 		patientService.deletePatient(patientid);
 		List<Patient> patientes = patientService.getAllPatientInfo();
@@ -47,7 +47,7 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/editPatient")
-	public ModelAndView editBill(HttpServletRequest request) throws IOException {
+	public ModelAndView editPatient(HttpServletRequest request) throws IOException {
 		System.out.println("EditPatientMetod");
 		Long id = Long.parseLong(request.getParameter("id"));
 		System.out.println((request.getParameter("id")));
@@ -56,7 +56,7 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/PatientTracker")
-	public ModelAndView Tracker(HttpServletResponse response) throws IOException {
+	public ModelAndView PatientTracker(HttpServletResponse response) throws IOException {
 		List<Patient> patientes = patientService.getAllPatientInfo();
 		return new ModelAndView("PatientTracker", "patientes", patientes);
 	}
@@ -75,7 +75,7 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/addPatient")
-	public ModelAndView addNewBill(HttpServletRequest request) throws Exception {
+	public ModelAndView addNewPatient(HttpServletRequest request) throws Exception {
 		System.out.println("please Add Patient");
 		String AadharId = request.getParameter("AadharId");
 		String Name = request.getParameter("Name");
